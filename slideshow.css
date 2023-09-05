@@ -2,17 +2,30 @@ body {
     background: rgb(93, 93, 93);
     background-size: 71.6%;
 }
+#main-div{
+    position:fixed;
+    margin-top: 35%;
+    margin-left: 2%;
+    width: 50%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.8%;
+    text-shadow: 0 1px 0 black;
+}
+#main-div p{
+    font-size:1.3em;
+}
 .column-border {
     border-left: 3px solid #36333a;
     padding: 10px;
-    border-bottom-style: inset;
+    /*border-bottom-style: inset;
     border-bottom: 2px solid rgb(207, 207, 207);
-    /*box-shadow: 0 30px 40px rgba(255, 255, 255, 0.9);*/    
+    box-shadow: 0 30px 40px rgba(255, 255, 255, 0.9);*/    
 }
 .transbox{
     background-color: rgba(0, 0, 0, 0.4);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 }
 .sidebox{
     height: 23vh;
@@ -21,9 +34,17 @@ body {
     padding-top:1em;
     padding-left:1em;
 }
-.sidebox p {
-    font-size: 0.7em;
+.sidebox:hover {
+    transform: scale(1.1); 
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+.sidebox p {
+    font-size: 0.8em;
+  }
+.sidebox div {
+    margin-top:8%;
+}
 .vertical-center {
   margin: 0;
   position: absolute;
@@ -44,22 +65,22 @@ body {
     position: fixed;
     z-index: -1;     
     object-fit: cover;
-    width: 16%;
+    width: 23%;
     object-position: 100%;
 }
-.arrow-up {
-    width: 30px;
-    height: 60px;
-    background-color: #afafaf; 
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.divider
+{
+	position: relative;
+	height: 1px;
 }
 
-.arrow-up:hover {
-    background-color: #737474; 
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 15%;
+	width: 70%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(255,255,255), transparent);
 }
