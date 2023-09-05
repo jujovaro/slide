@@ -192,7 +192,9 @@
     <div class="arrow-up">></div>
 <script>
     $(document).ready(function () {    
-    $(".sidebox").click(function () {        
+    $(".sidebox").click(function () {   
+        myDiv = $("#main-div");
+        myDiv.css("display", "none");     
         let info = $(this).data("info");        
         console.log("Element info: " + info);
         let hElement = $(this).find("h4");
@@ -205,6 +207,7 @@
         let imgName = "img" + imgNumber + ".jpg";
         let image = $("#main-img");
         image.attr("src",imgName);
+        myDiv.fadeIn(1000);
     });
 });
 </script>
